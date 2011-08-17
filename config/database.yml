@@ -1,0 +1,23 @@
+development:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: point_development
+  username: root
+  password: zhangbin
+
+test:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: point_test
+  username: root
+  password: zhangbin
+
+production:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: point_production
+  username: root
+  password: zhangbin
