@@ -1,0 +1,27 @@
+<!-- <%= form_for(@author) do |f| %>
+  <% if @author.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@author.errors.count, "error") %> prohibited this author from being saved:</h2>
+
+      <ul>
+      <% @author.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %> -->
+
+<!-- <div class="card"> -->
+<div class="intro_modi_form">
+<div class="intro_left"><%= "author" %></div>
+<div class="intro_detail">
+  <% semantic_form_for @author do |author| %>
+    <%= author.inputs :name, :position, :concept, :resume, :style, :intro %>    
+    <%= author.buttons :commit %>
+  <% end %>
+<!-- </div> -->
