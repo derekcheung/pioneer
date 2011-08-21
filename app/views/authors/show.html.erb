@@ -1,5 +1,19 @@
 <p id="notice"><%= notice %></p>
 
+<% if @author.photo? %>
+	<p><%= image_tag(@author.photo_url) %> </p>
+<% end %>
+
+<p>
+  <b><%= t(:name) %></b>
+  <%= @author.name %>
+</p>
+
+<p>
+  <b><%= t(:position) %></b>
+  <%= @author.position %>
+</p>
+
 
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Back', authors_path %>

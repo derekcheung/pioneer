@@ -10,7 +10,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110818124317) do
+ActiveRecord::Schema.define(:version => 20110820172640) do
+
+  create_table "attachments", :force => true do |t|
+    t.integer  "parent_id"
+    t.string   "parent_type"
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+    t.integer  "uploader_id"
+    t.string   "uploader_type"
+    t.string   "attached_file"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "attachments", ["parent_id", "parent_type"], :name => "index_attachments_on_parent_id_and_parent_type"
+  add_index "attachments", ["uploader_id", "uploader_type"], :name => "index_attachments_on_uploader_id_and_uploader_type"
 
   create_table "authors", :force => true do |t|
     t.string   "name"
@@ -21,8 +38,17 @@ ActiveRecord::Schema.define(:version => 20110818124317) do
     t.text     "intro"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo"
   end
 
   add_index "authors", ["name"], :name => "index_authors_on_name"
+
+  create_table "news", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "insertdate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

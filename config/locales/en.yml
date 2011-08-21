@@ -2,4 +2,45 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  formtastic:
+    titles:
+      post_details: "Post details"
+    labels:
+      author:
+        name: Name
+      agent:
+        first_name: "First name"
+      company:
+        name: "Company Name"
+      payroll:
+        name: Name
+    hints:
+      author:
+        name: "Enter a unique name for this reseller"
+      company:
+        name: "Enter a unique name for this Company"
+        email: "The unique email address of the Company User"
+        identification_number: "Either a passport or ID number for this Company User"
+      payroll:
+        name: "Enter a unique name for this Payroll"
+      agent:
+        email: "The unique email address of the agent"
+        identification_number: "Either a passport or ID number for this agent"
+        password: "The agent can change this password when logged in"
+        password_confirmation: "Please re-enter the same password to confirm"
+      card_holder:
+        identification_number: "Either a passport or ID number for this agent"
+    actions:
+      create: Create
+      update: Update
+  
+  # general
   hello: "Hello world"
+  upload: Upload
+  uploading: Uploading
+  attachment_uploaded: Success
+  name: Name
+  position: Position
+  file: File
+  select_file: Select a file to upload from your local machine
+  please_wait: "Please wait.."

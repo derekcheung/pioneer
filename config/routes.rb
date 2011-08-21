@@ -1,5 +1,14 @@
 Pointwebsite::Application.routes.draw do
-  resources :authors
+  resources :attachments
+
+  resources :news
+
+  resources :authors do
+    member do
+      get :attach
+      post :attached
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,6 +1,9 @@
 class AuthorsController < ApplicationController
   # GET /authors
   # GET /authors.xml
+  
+  before_filter :find_author, :only => [ :show, :edit, :update, :attach, :attached ]
+  
   def index
     @authors = Author.all
 
@@ -13,7 +16,7 @@ class AuthorsController < ApplicationController
   # GET /authors/1
   # GET /authors/1.xml
   def show
-    @author = Author.find(params[:id])
+    # @author = Author.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,7 +28,6 @@ class AuthorsController < ApplicationController
   # GET /authors/new.xml
   def new
     @author = Author.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @author }
@@ -34,7 +36,7 @@ class AuthorsController < ApplicationController
 
   # GET /authors/1/edit
   def edit
-    @author = Author.find(params[:id])
+    # @author = Author.find(params[:id])
   end
 
   # POST /authors
@@ -56,7 +58,7 @@ class AuthorsController < ApplicationController
   # PUT /authors/1
   # PUT /authors/1.xml
   def update
-    @author = Author.find(params[:id])
+    # @author = Author.find(params[:id])
 
     respond_to do |format|
       if @author.update_attributes(params[:author])
@@ -79,5 +81,35 @@ class AuthorsController < ApplicationController
       format.html { redirect_to(authors_url) }
       format.xml  { head :ok }
     end
+  end
+
+  def attach
+    if @author.attachment
+      @attachment = @author.attachment
+    else
+      @attachment = @author.attachments.new 
+    end
+  end
+
+  def attached
+    if @author.attachment
+      @attachment = @author.attachment.update_attributes(params[:attachment])
+    else
+      @attachment = @author.attachments.new(params[:attachment])
+    end
+    # @attachment.uploader = @author  
+    if @attachment.save
+        # format.html { redirect_to(@author, :notice => 'Author was successfully created.') }
+        # format.xml  { render :xml => @author, :status => :created, :location => @author }
+        redirect_to(@author, :notice => t(:attachment_uploaded))
+    else
+      render(:action => :attach)
+    end
+  end
+
+  private
+  
+  def find_author
+    @author ||= Author.find(params[:id])
   end
 end

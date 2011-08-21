@@ -17,11 +17,20 @@
 <% end %> -->
 
 <!-- <div class="card"> -->
-<div class="intro_modi_form">
+<!-- <div class="intro_modi_form">
 <div class="intro_left"><%= "author" %></div>
-<div class="intro_detail">
-  <% semantic_form_for @author do |author| %>
-    <%= author.inputs :name, :position, :concept, :resume, :style, :intro %>    
-    <%= author.buttons :commit %>
+<div class="intro_detail"> -->
+  <% semantic_form_for @author, :html => { :multipart => true } do |author| %>
+    <%= author.inputs :name, :position, :concept, :resume, :style, :intro %>
+    <%= author.inputs do %>
+    	<%= author.input :photo, :label => t(:file), :required => true, :hint => t(:select_file ), :as => :file %>
+    	<%= image_tag(@author.photo_url) if @author.photo? %>
+    	<%= author.buttons do %>
+      		<%= author.commit_button t(:upload), :button_html => { :disable_with => t(:uploading) } %>
+    	<% end %>
+    <% end %>    
+    <%= author.buttons { author.commit_button(:button_html => { :disable_with => t(:please_wait) }) } %>
   <% end %>
+
+<!-- <%= link_to 'Attach', attach_author_url(@author, @attachment) %>   -->
 <!-- </div> -->

@@ -2,4 +2,49 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 cn:
+  formtastic:
+    titles:
+      post_details: "Post details"
+    labels:
+      author:
+        name: "姓名"
+        position: "职位"
+        concept: "设计理念"
+        resume: "自我复述"
+        style: "设计风格"
+      news:
+        title: "标题"
+      company:
+        name: "Company Name"
+      payroll:
+        name: Name
+    hints:
+      author:
+        name: "Enter a unique name for this reseller"
+      company:
+        name: "Enter a unique name for this Company"
+        email: "The unique email address of the Company User"
+        identification_number: "Either a passport or ID number for this Company User"
+      payroll:
+        name: "Enter a unique name for this Payroll"
+      agent:
+        email: "The unique email address of the agent"
+        identification_number: "Either a passport or ID number for this agent"
+        password: "The agent can change this password when logged in"
+        password_confirmation: "Please re-enter the same password to confirm"
+      card_holder:
+        identification_number: "Either a passport or ID number for this agent"
+    actions:
+      create: "新建"
+      update: "更新"
+  
+  # general
   hello: "您好"
+  upload: "上传"
+  uploading: "上传中"
+  attachment_uploaded: "附件上传成功"
+  name: "姓名"
+  position: "职位"
+  file: "文件"
+  select_file: "请选择要上传的文件"
+  please_wait: "请稍等.."
