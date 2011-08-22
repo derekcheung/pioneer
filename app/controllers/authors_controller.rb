@@ -2,7 +2,7 @@ class AuthorsController < ApplicationController
   # GET /authors
   # GET /authors.xml
   
-  before_filter :find_author, :only => [ :show, :edit, :update, :attach, :attached ]
+  before_filter :find_author, :only => [ :show, :edit, :destroy, :update, :attach, :attached ]
   
   def index
     @authors = Author.all
@@ -16,7 +16,6 @@ class AuthorsController < ApplicationController
   # GET /authors/1
   # GET /authors/1.xml
   def show
-    # @author = Author.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -36,7 +35,6 @@ class AuthorsController < ApplicationController
 
   # GET /authors/1/edit
   def edit
-    # @author = Author.find(params[:id])
   end
 
   # POST /authors
@@ -58,7 +56,6 @@ class AuthorsController < ApplicationController
   # PUT /authors/1
   # PUT /authors/1.xml
   def update
-    # @author = Author.find(params[:id])
 
     respond_to do |format|
       if @author.update_attributes(params[:author])
@@ -74,7 +71,6 @@ class AuthorsController < ApplicationController
   # DELETE /authors/1
   # DELETE /authors/1.xml
   def destroy
-    @author = Author.find(params[:id])
     @author.destroy
 
     respond_to do |format|

@@ -1,12 +1,12 @@
-<h1>Listing authors</h1>
+<h1><%= t(:list_author) %></h1>
 
 <table>
   <tr>
-    <th>姓名</th>
-    <th>职位</th>
-    <th>设计理念</th>
-    <th>自我复述</th>
-    <th>风格</th>
+    <th><%= t(:name) %></th>
+    <th><%= t(:position) %></th>
+    <th><%= t(:concept) %></th>
+    <th><%= t(:resume) %></th>
+    <th><%= t(:style) %></th>
   </tr>
 
 <% @authors.each do |author| %>
@@ -16,13 +16,13 @@
     <td><%= author.concept %></td>
     <td><%= author.resume %></td>
     <td><%= author.style %></td>
-    <td><%= link_to 'Show', author %></td>
-    <td><%= link_to 'Edit', edit_author_path(author) %></td>
-    <td><%= link_to 'Destroy', author, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to t(:show), author %></td>
+    <td><%= link_to t(:edit), edit_author_path(author) %></td>
+    <td><%= link_to t(:destroy), author, :confirm => t(:destroy_confirm), :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Author', new_author_path %>
+<%= link_to t(:new_author), new_author_path %>

@@ -1,4 +1,9 @@
 Pointwebsite::Application.routes.draw do
+  
+  match 'about' => 'abouts#index'
+
+  resources :abouts
+
   resources :attachments
 
   resources :news
