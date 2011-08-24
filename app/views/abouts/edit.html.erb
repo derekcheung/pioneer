@@ -1,6 +1,8 @@
-<h1>Editing about</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @about %> |
-<%= link_to 'Back', abouts_path %>
+<div class="intro_about">
+	<h1><%= t(:edit_about) %></h1>
+	
+	<%= render 'form' %>
+	
+	<%= link_to t(:show), @about %> |
+	<%= link_to t(:back), abouts_path %>
+</div>

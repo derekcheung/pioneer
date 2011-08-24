@@ -1,5 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-
-<%= link_to 'Edit', edit_about_path(@about) %> |
-<%= link_to 'Back', abouts_path %>
+<div class="intro_about">
+	<table>
+		<tr>
+			<td><h2><%= @about.title %></td>
+		</tr>
+		<tr>
+		  	<td><%= raw @about.content.gsub(/\r\n/,'<br/>') %></td>
+		</tr>
+	</table>
+	<%= link_to t(:edit), edit_about_path(@about) %> |
+	<%= link_to t(:back), abouts_path %>
+<div class="intro_about">

@@ -231,13 +231,13 @@ body{
 	POSITION: static;
 }
 .intro_about{
-	float:left;
-	width:677px;
+	float:right;
+	width:75%;
 	height:720px;
 	margin:15px 0 15px 0;
 }
 .intro_about span{
-	float:left;
+	float:right;
 	width:100px;
 	padding-right:30px;
 	text-align:right;

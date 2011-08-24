@@ -1,25 +1,21 @@
-<table>
-<!--   <tr>
-    <th><%= t(:title) %></th>
-    <th><%= t(:content) %></th>
-  </tr> -->
-<% @abouts.each do |about| %>
-  <tr>
-  	<td><%= about.title %></td>
-  </tr>
-  <tr>
-  	<td><%= raw about.content.gsub(/\r\n/,'<br/>') %></td>
-  </tr>
-  <tr>
-    <td>
-    	<%= link_to t(:show), about %>
-    	<%= link_to t(:edit), edit_about_path(about) %>
-    	<%= link_to t(:destroy), about, :confirm => t(:destroy_confirm), :method => :delete %>
-    </td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New About', new_about_path %>
+<div class="intro_about">
+	<table>
+		<% @abouts.each do |about| %>
+		  <tr>
+		  	<td><h2><%= about.title %></td>
+		  </tr>
+		  <tr>
+		  	<td><%= raw about.content.gsub(/\r\n/,'<br/>') %></td>
+		  </tr>
+		  <tr>
+		    <td>
+		    	<%= link_to t(:show), about %>
+		    	<%= link_to t(:edit), edit_about_path(about) %>
+		    	<%= link_to t(:destroy), about, :confirm => t(:destroy_confirm), :method => :delete %>
+		    </td>
+		  </tr>
+		<% end %>
+	</table>
+	<br/>
+	<%= link_to t(:new), new_about_path %>
+</div>

@@ -1,22 +1,4 @@
-<!-- <%= form_for(@about) do |f| %>
-  <% if @about.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@about.errors.count, "error") %> prohibited this about from being saved:</h2>
-
-      <ul>
-      <% @about.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %> -->
-
-  <% semantic_form_for @about do |about| %>
-    <%= about.inputs :title, :content %>   
+<% semantic_form_for @about do |about| %>
+	<%= about.inputs :title, :content %>   
     <%= about.buttons { about.commit_button(:button_html => { :disable_with => t(:please_wait) }) } %>
-  <% end %>
+<% end %>

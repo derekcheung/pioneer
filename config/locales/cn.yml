@@ -47,6 +47,7 @@ cn:
   please_wait: "请稍等.."
   title: "标题"
   content: "内容"
+  new: "新增"
   show: "显示"
   edit: "编辑"
   back: "返回"
@@ -63,3 +64,5 @@ cn:
   #new
   news: "最新动态"
   add_news: "增加最新动态"
+  #about
+  edit_about: "编辑关于页面"

@@ -1,0 +1,89 @@
+/* -------------------------------------------------------------------------------------------------
+
+Load this stylesheet after formtastic.css in your layouts to override the CSS to suit your needs.
+This will allow you to update formtastic.css with new releases without clobbering your own changes.
+
+For example, to make the inline hint paragraphs a little darker in color than the standard #666:
+
+form.formtastic fieldset > ol > li p.inline-hints { color:#333; }
+
+HINT:
+The following style may be *conditionally* included for improved support on older versions of IE(<8)
+form.formtastic fieldset ol li fieldset legend { margin-left: -6px;}
+
+--------------------------------------------------------------------------------------------------*/
+/* line 16, ../../../app/stylesheets/formtastic_changes.scss */
+form.formtastic fieldset.inputs {
+  padding-left: 20px;
+  /*  -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #DDDDDD;
+    padding: 10px;
+    margin-bottom: 20px;
+  */
+}
+
+/* line 26, ../../../app/stylesheets/formtastic_changes.scss */
+form.formtastic fieldset.buttons {
+  padding-left: 20px;
+}
+/* line 29, ../../../app/stylesheets/formtastic_changes.scss */
+form.formtastic fieldset.buttons ol li.commit {
+  border: 0;
+}
+/* line 34, ../../../app/stylesheets/formtastic_changes.scss */
+form.formtastic legend {
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 20px 0 20px 0;
+}
+/* line 39, ../../../app/stylesheets/formtastic_changes.scss */
+form.formtastic input[type="text"], form.formtastic input[type="password"], form.formtastic input[type="email"], form.formtastic select {
+  font-size: 1.1em;
+  font-weight: bold;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid #DDDDDD;
+  padding: 5px;
+  font-weight: bold;
+  color: #666666;
+  min-width: 200px;
+}
+/* line 51, ../../../app/stylesheets/formtastic_changes.scss */
+form.formtastic input[type="submit"], form.formtastic input[type="button"] {
+  -moz-background-clip: border;
+  -moz-background-inline-policy: continuous;
+  -moz-background-origin: padding;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  -x-system-font: none;
+  background: #dddddd url(../../images/bg-btn.gif) repeat-x scroll 0 0;
+  border-color: #DDDDDD #DDDDDD #CCCCCC;
+  border-style: solid;
+  border-width: 1px;
+  color: #333333;
+  cursor: pointer;
+  font-size: 1em;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 14px;
+  margin: 0;
+  overflow: visible;
+  padding: 4px 8px 5px;
+  text-shadow: 1px 1px 0 #FFFFFF;
+  width: auto;
+}
+/* line 79, ../../../app/stylesheets/formtastic_changes.scss */
+form.formtastic input[type="submit"]:hover, form.formtastic input[type="button"]:hover {
+  background-position: 0 -6px;
+  border-color: #999999 #999999 #888888;
+  color: #275FB6;
+  text-decoration: none;
+}

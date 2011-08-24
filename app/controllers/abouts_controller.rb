@@ -3,7 +3,6 @@ class AboutsController < ApplicationController
   # GET /abouts.xml
   def index
     @abouts = About.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @abouts }

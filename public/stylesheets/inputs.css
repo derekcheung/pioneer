@@ -1,0 +1,73 @@
+/* line 1, ../../../app/stylesheets/inputs.scss */
+input {
+  font-family: "Helvetica Neue", "Helvetica-Neue", Helvetica, "Arial", sans-serif;
+  font-size: 11px;
+}
+
+/* line 7, ../../../app/stylesheets/inputs.scss */
+input[type="text"], input[type="password"], input[type="email"], select {
+  font-size: 1.1em;
+  font-weight: bold;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid #dddddd;
+  padding: 5px;
+  font-weight: bold;
+  color: #666666;
+  min-width: 200px;
+}
+
+/* line 19, ../../../app/stylesheets/inputs.scss */
+a.btn, input[type="submit"], input[type="button"] {
+  -moz-background-clip: border;
+  -moz-background-inline-policy: continuous;
+  -moz-background-origin: padding;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  -x-system-font: none;
+  background: #dddddd url(../../images/bg-btn.gif) repeat-x scroll 0 0;
+  border-color: #dddddd #dddddd #cccccc;
+  border-style: solid;
+  border-width: 1px;
+  color: #333333;
+  cursor: pointer;
+  font-size: 1em;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 14px;
+  margin: 0;
+  overflow: visible;
+  padding: 4px 8px 5px;
+  text-shadow: 1px 1px 0 #ffffff;
+  width: auto;
+}
+
+/* line 47, ../../../app/stylesheets/inputs.scss */
+a.btn:hover {
+  background-position: 0 -6px;
+  border-color: #999999 #999999 #888888;
+  color: #275fb6;
+  text-decoration: none;
+}
+
+/* line 53, ../../../app/stylesheets/inputs.scss */
+input[type="submit"]:hover {
+  background-position: 0 -6px;
+  border-color: #999999 #999999 #888888;
+  color: #275fb6;
+  text-decoration: none;
+}
+
+/* line 59, ../../../app/stylesheets/inputs.scss */
+input[type="button"]:hover {
+  background-position: 0 -6px;
+  border-color: #999999 #999999 #888888;
+  color: #275fb6;
+  text-decoration: none;
+}
