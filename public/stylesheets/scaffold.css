@@ -12,7 +12,7 @@ pre {
   font-size: 11px;
 }
 
-a { color: #fff; }
+a { color: #000; }
 a:visited { color: #666; }
 a:hover { color:#000; background-color:#fff; }
 

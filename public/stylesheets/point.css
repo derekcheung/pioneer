@@ -17,7 +17,7 @@ body{
 	width:970px;
 	height:150px;
 	margin:0 auto;
-	background:url(../images/top_back.JPG) repeat-x;
+/*	background:url(../images/top_back.JPG) repeat-x;*/
 }
 .top ul{
 	width:450px;
@@ -35,7 +35,7 @@ body{
 .top_in ul li{
 	float:left;
 	font:normal 15px Arial, Helvetica, sans-serif;
-	color:#fff;
+/*	color:#fff;*/
 }
 .logo{
 	float:left;
@@ -44,23 +44,25 @@ body{
 }
 .nv{
 	width:970px;
+	height:18px;
 	margin:0 auto;
 	position:relative;
-	text-align:left;
+	background:url(../images/top_back.JPG) repeat-x;
 }
-.nv ul li{
+.nv ul{
 	float:left;
 	margin:0 auto;
+	position:relative;
 	font:normal 14px Arial, Helvetica, sans-serif;
 	color:#000;
 }
-.nv ul li a{
-	padding:0 5px;
+.nv ul a{
+	text-align:left;
+	padding:0 14px;
 	font:normal 14px Arial, Helvetica, sans-serif;
-	color:#000;
 	text-decoration:none;
 }
-.nv ul li a:hover{
+.nv ul a:hover{
 	text-decoration:underline;
 }
 .menu{
@@ -317,7 +319,7 @@ body{
 
 .intro_news{
 	float:left;
-	width:677px;
+	width:970px;
 	height:345px;
 	margin:15px 0 15px 0;
 }
