@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pointwebsite</title>
+  <title>点装装饰</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
 
+<div class="top">
+<div class="logo"><!-- <a href="/" target="_self"> -->
+	<img src="/images/logo.JPG" alt="" width="300" height="150" border="0">
+	<!-- </a> -->
+</div>
+<div class="top_in">
+    <ul>
+      <li>点装装饰工程有限公司</li>
+      <li>热线电话</li>
+    </ul>
+</div>
+</div>
+<div class="nv">
+	<ul>
+	  <li><a href="/index.html" target="_self">首页</a></li>
+      <li><a href="/about.html" target="_self">最新动态</a></li>
+      <li><a href="/payments.html" target="_self">走进点装</a></li>
+      <li><a href="/partnerships.html" target="_self">产品展厅</a></li>
+      <li><a href="/news.html" target="_self">装修社区</a></li>
+      <li><a href="/application.html" target="_self">人才招募</a></li>
+	  <li><a href="/contact.html" target="_self">售后服务</a></li>
+	  <li><a href="/contact.html" target="_self">在线支持</a></li>	  
+	</ul>
+</div>
 <%= yield %>
+
+<div class="footer">
+<div class="footer_in">
+    <ul>
+	  <li><a href="/index.html" target="_self">首页</a>|</li>
+      <li><a href="/about.html" target="_self">最新动态</a>|</li>
+      <li><a href="/payments.html" target="_self">走进点装</a>|</li>
+      <li><a href="/partnerships.html" target="_self">产品展厅</a>|</li>
+      <li><a href="/news.html" target="_self">装修社区</a>|</li>
+      <li><a href="/application.html" target="_self">人才招募</a>|</li>
+	  <li><a href="/contact.html" target="_self">售后服务</a>|</li>
+	  <li><a href="/contact.html" target="_self">在线支持</a>|</li>
+	  <li><a href="/admin.html" target="_self">Admin</a></li>
+    </ul>
+    <p class="copyright">Copyright &copy; 广东点装装饰工程有限公司 2010-2011</p>
+</div>
+</div>
 
 </body>
 </html>

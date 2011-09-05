@@ -1,5 +1,7 @@
 Pointwebsite::Application.routes.draw do
   
+  resources :users
+
   # match 'about' => 'abouts#index'
 
   resources :abouts
