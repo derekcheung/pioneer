@@ -5,7 +5,7 @@
 	<table>
 		<% @news.each do |news| %>
   		<tr>
-    		<td><%= link_to news.title, news %></td>
+    		<td><h4><%= link_to news.title, news %></h4></td>
     		<td><%= link_to t(:edit), edit_news_path(news) %></td>
     		<td><%= link_to t(:destroy), news, :confirm => 'Are you sure?', :method => :delete %></td>
   		</tr>

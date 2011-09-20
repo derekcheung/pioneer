@@ -21,3 +21,21 @@
 	<br/>
 <!-- 	<%= link_to t(:new), new_about_path %> -->	
 </div>
+<div class="divider1"></div>
+<div id="normalcontent">
+	<h3><strong><%= t(:list_author) %></strong></h3>
+	<div class="contentarea">
+		<% @authors.each do |author| %>
+	  	<tr>
+	  		<td><%= author.name %></td>
+		    <td><%= author.position %></td>
+	<!-- 	    <td><%= author.concept %></td> -->
+	<!-- 	    <td><%= author.resume %></td> -->
+		    <td><%= author.style %></td>
+		    <td><%= link_to t(:show), author %></td>
+		    <td><%= link_to t(:edit), edit_author_path(author) %></td>
+		    <td><%= link_to t(:destroy), author, :confirm => t(:destroy_confirm), :method => :delete %></td>
+	  	</tr>
+	<% end %>
+	</div>
+</div>
