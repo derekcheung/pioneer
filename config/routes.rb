@@ -1,5 +1,9 @@
 Pointwebsite::Application.routes.draw do
   
+  get "index/index"
+  
+  # match 'index' => 'index#index'
+
   resources :users
 
   # match 'about' => 'abouts#index'
@@ -16,6 +20,8 @@ Pointwebsite::Application.routes.draw do
       post :attached
     end
   end
+  
+  root :to => "index#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

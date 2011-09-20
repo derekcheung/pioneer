@@ -1,17 +1,18 @@
-<div class="intro_news">
-<h1><%= t(:news) %></h1>
+<!-- <div class="intro_news"> -->
+<div id="normalcontent">
+	<h3><strong><%= t(:news) %></strong></h3>
+	<div class="contentarea">
+	<table>
+		<% @news.each do |news| %>
+  		<tr>
+    		<td><%= link_to news.title, news %></td>
+    		<td><%= link_to t(:edit), edit_news_path(news) %></td>
+    		<td><%= link_to t(:destroy), news, :confirm => 'Are you sure?', :method => :delete %></td>
+  		</tr>
+		<% end %>
+	</table>
+	</div>
+	<br />
 
-<table>
-<% @news.each do |news| %>
-  <tr>
-    <td><%= link_to news.title, news %></td>
-    <td><%= link_to t(:edit), edit_news_path(news) %></td>
-    <td><%= link_to t(:destroy), news, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to t(:add_news), new_news_path %>
+	<%= link_to t(:add_news), new_news_path %>
 </div>

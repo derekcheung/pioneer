@@ -1,9 +1,10 @@
-<div class="intro_about">
+<!-- <div class="intro_about"> -->
+<div id="normalcontent">
+	<h3><strong><%= t(:about) %></strong></h3>
+	<div class="contentarea">
 	<table>
 		<% @abouts.each do |about| %>
-		  <tr>
-		  	<td><h2><%= about.title %></td>
-		  </tr>
+		  <img src="images/pic1.jpg" class="left" />
 		  <tr>
 		  	<td><%= raw about.content.gsub(/\r\n/,'<br/>') %></td>
 		  </tr>
@@ -14,8 +15,9 @@
 		    	<%= link_to t(:destroy), about, :confirm => t(:destroy_confirm), :method => :delete %>
 		    </td>
 		  </tr>
-		<% end %>
+		<% end %>		
 	</table>
+	</div>
 	<br/>
-<!-- 	<%= link_to t(:new), new_about_path %> -->
+<!-- 	<%= link_to t(:new), new_about_path %> -->	
 </div>

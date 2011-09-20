@@ -17,7 +17,6 @@ body{
 	width:970px;
 	height:150px;
 	margin:0 auto;
-/*	background:url(../images/top_back.JPG) repeat-x;*/
 }
 .top ul{
 	width:450px;
@@ -37,10 +36,16 @@ body{
 	font:normal 15px Arial, Helvetica, sans-serif;
 /*	color:#fff;*/
 }
-.logo{
+/*.logo{
 	float:left;
 	width:300px;
-	height:150px;	
+	height:150px;
+}*/
+.headbg{
+    background:url(../images/top_back.jpg) repeat-x;
+    height: 56px;
+    margin: 0 auto;
+    width: 100%;
 }
 .nv{
 	width:970px;
@@ -167,16 +172,24 @@ body{
 	height:168px;
 }
 .footer{
-	margin-top:15px; 
+/*	margin-top:15px; 
 	float:left;
-	width:100%; 
-	height:81px; 
-	background:url(../images/foot_back.JPG) repeat-x;
+/*	width:100%; */
+/*	height:81px;*/
+/*	background:url(../images/foot_back.JPG) repeat-x;*/
+/*	background: #fff url('/images/bg2.jpg') repeat-x;**/
+position: relative;
+height: 81px;
+clear: both;
+margin-top:15px;
+/*padding-top: 3.0em;*/
+background: #fff url('/images/foot_back.JPG') repeat-x 0em 2.5em;
+font-size: 0.8em;	
 }
 .footer_in{
-	width:970px; 
-	margin:0 auto; 
-	height:81px;  
+	width:970px;
+	margin:0 auto;
+	height:81px;
 	position:relative;
 	text-align:center;
 }
@@ -204,10 +217,10 @@ body{
 .copyright{
 	font:normal 11px Arial, Helvetica, sans-serif;
 	position:absolute;
-	left:350px;
+	text-align: center;
 	top:50px;
 	color:#000;
-	width:320px;
+	width:100%;
 }
 
 .div_xixi {
@@ -278,8 +291,7 @@ body{
 }
 .intro_about{
 	float:right;
-	width:75%;
-	height:720px;
+	width:970px;
 	margin:15px 0 15px 0;
 }
 .intro_about span{
