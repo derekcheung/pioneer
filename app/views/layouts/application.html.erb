@@ -35,9 +35,28 @@
 		  	<li><a href="/contact.html" target="_self">QQ</a></li>
 		</ul>
 	</div>
+	<%= javascript_include_tag "js" %>
+	<script type="text/javascript">	
+		banner(294,206,"/sitemap/index_01.jpg|/sitemap/index_02.jpg|/sitemap/index_03.jpg|/sitemap/index_04.jpg|/sitemap/index_05.jpg","dx/forum-huwai-1.html|dx/forum-huwai-1.html|dx/forum-huwai-1.html|dx/forum-huwai-1.html|dx/forum-huwai-1.html","happy|out|run|life|share")
+	</script>
 	<div id="menubottom"></div>
-<div id="content">	
-<%= yield %>	
+<!-- 	<li id="pic-new">
+          <div id="SlidePlayer">
+            <ul class="Slides">
+              <li style=""><img src="/sitemap/index_01.jpg" alt="关于我们" border="0"></li>
+			  <li style=""><img src="/sitemap/index_02.jpg" alt="关于我们" border="0"></li>
+			  <li style=""><img src="/sitemap/index_03.jpg" alt="案例" border="0"></li>
+			  <li style=""><img src="/sitemap/index_04.jpg" alt="新闻" border="0"></li>
+			  <li style=""><img src="/sitemap/index_05.jpg" alt="联系我们" border="0"></li>
+            </ul>
+          <ul class="SlideTriggers"><li class="Current">1</li><li class="">2</li><li class="">3</li><li class="">4</li><li class="">5</li></ul></div>
+    </li>
+    <%= javascript_include_tag "tb" %>
+  	<script type="text/javascript">
+		TB.widget.SimpleSlide.decoration('SlidePlayer', {eventType:'mouse', effect:'scroll'});
+	</script> -->
+<div id="content">
+<%= yield %>
 </div>
 <div class="footer">
 <div class="footer_in">

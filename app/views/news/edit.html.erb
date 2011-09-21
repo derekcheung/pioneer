@@ -1,6 +1,6 @@
-<h1>Editing news</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @news %> |
-<%= link_to 'Back', news_index_path %>
+<div id="normalcontent">
+	<h3><strong><%= t(:edit_news) %></strong></h3>
+	<%= render 'form' %>
+	<%= link_to 'Show', @news %> |
+	<%= link_to 'Back', news_index_path %>
+</div>
