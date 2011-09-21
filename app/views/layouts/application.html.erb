@@ -22,7 +22,6 @@
 	</div>
 	<div id="headerpic"></div>
 	<div id="menu">
-		<!-- HINT: Set the class of any menu link below to "active" to make it appear active -->
 		<ul>
 			<li><a href="/" target="_self">首页</a></li>
 			<li><a href="/news" target="_self">最新动态</a></li>
@@ -35,11 +34,6 @@
 		  	<li><a href="/contact.html" target="_self">QQ</a></li>
 		</ul>
 	</div>
-	<%= javascript_include_tag "js" %>
-	<script type="text/javascript">	
-		banner(294,206,"/sitemap/index_01.jpg|/sitemap/index_02.jpg|/sitemap/index_03.jpg|/sitemap/index_04.jpg|/sitemap/index_05.jpg","dx/forum-huwai-1.html|dx/forum-huwai-1.html|dx/forum-huwai-1.html|dx/forum-huwai-1.html|dx/forum-huwai-1.html","happy|out|run|life|share")
-	</script>
-	<div id="menubottom"></div>
 <!-- 	<li id="pic-new">
           <div id="SlidePlayer">
             <ul class="Slides">
@@ -55,9 +49,7 @@
   	<script type="text/javascript">
 		TB.widget.SimpleSlide.decoration('SlidePlayer', {eventType:'mouse', effect:'scroll'});
 	</script> -->
-<div id="content">
 <%= yield %>
-</div>
 <div class="footer">
 <div class="footer_in">
     <p class="copyright">Copyright &copy; 广东点装装饰工程有限公司 2010-2011 粤ICP备0000000</p>
