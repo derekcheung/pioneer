@@ -1,19 +1,33 @@
-<p id="notice"><%= notice %></p>
-
-<% if @author.photo? %>
-	<p><%= image_tag(@author.photo_url) %> </p>
-<% end %>
-
-<p>
-  <b><%= t(:name) %></b>
-  <%= @author.name %>
-</p>
-
-<p>
-  <b><%= t(:position) %></b>
-  <%= @author.position %>
-</p>
-
-
+<div id="menubottom"></div>
+<div id="content">
+	<div id="normalcontent">
+<!-- 	<p id="notice"><%= notice %></p> -->
+		<div class="contentarea">
+			<% if @author.photo? %>
+				<%= image_tag(@author.photo_url) %>
+			<% end %>
+			<img src="/images/xbe.jpg" class="left" alt="XuBoEn" />
+			<b><%= t(:name) %></b>
+			<%= @author.name %>
+			<br/>
+			<br/>
+			<b><%= t(:position) %></b>
+			<%= @author.position %>
+			<br/>
+			<br/>
+			<b><%= t(:style) %></b>
+  			<%= @author.style %>
+  			<br/>
+  			<br/>
+			<b><%= t(:concept) %></b>
+			<%= raw @author.concept %>
+			<br/>
+			<br/>
+			<b><%= t(:resume) %></b>
+			<%= raw @author.resume %>
+			<br/>
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Back', authors_path %>
+</div>
+</div>
+</div>
