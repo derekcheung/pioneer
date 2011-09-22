@@ -172,19 +172,12 @@ body{
 	height:168px;
 }
 .footer{
-/*	margin-top:15px; 
-	float:left;
-/*	width:100%; */
-/*	height:81px;*/
-/*	background:url(../images/foot_back.JPG) repeat-x;*/
-/*	background: #fff url('/images/bg2.jpg') repeat-x;**/
-position: relative;
-height: 81px;
-clear: both;
-margin-top:15px;
-/*padding-top: 3.0em;*/
-background: #fff url('/images/foot_back.JPG') repeat-x 0em 2.5em;
-font-size: 0.8em;	
+	position: relative;
+	height: 81px;
+	clear: both;
+	margin-top:15px;
+	background: #fff url('/images/foot_back.JPG') repeat-x 0em 2.5em;
+	font-size: 0.8em;	
 }
 .footer_in{
 	width:970px;
