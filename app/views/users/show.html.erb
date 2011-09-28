@@ -1,11 +1,12 @@
+<div class="contentarea">
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= t(:name)%>:</b>
   <%= @user.name %>
 </p>
 
-<p>
+<!-- <p>
   <b>Hashed password:</b>
   <%= @user.hashed_password %>
 </p>
@@ -13,18 +14,18 @@
 <p>
   <b>Salt:</b>
   <%= @user.salt %>
-</p>
-
+</p> -->
 <p>
-  <b>Email:</b>
+  <b><%= t(:email) %>:</b>
   <%= @user.email %>
 </p>
 
-<p>
+<!-- <p>
   <b>Reset password token:</b>
   <%= @user.reset_password_token %>
+</p> -->
+<p>
+	<%= link_to t(:edit), edit_user_path(@user) %> |
+	<%= link_to t(:back), users_path %>
 </p>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+</div>

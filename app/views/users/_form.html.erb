@@ -1,37 +1,39 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :hashed_password %><br />
-    <%= f.text_field :hashed_password %>
-  </div>
-  <div class="field">
-    <%= f.label :salt %><br />
-    <%= f.text_field :salt %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :reset_password_token %><br />
-    <%= f.text_field :reset_password_token %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<div class="contentarea">
+	<%= form_for(@user) do |f| %>
+	  <% if @user.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+	
+	      <ul>
+	      <% @user.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+	
+	  <fieldset>
+	    <legend><%= t(:enter_user_details) %></legend>
+	    <span><%= t(:name)%>:</span> 
+	    <%= f.text_field :name %>
+	    <br />
+	    <br />
+	    <span><%= t(:password) %>:</span>    
+	    <%= f.password_field :password, :size => 40 %>
+	    <br />
+	    <br />
+	    <span><%= t(:confirm) %>:</span>    
+	    <%= f.password_field :password_confirmation, :size => 40 %>
+	    <br />
+	    <br />
+		<span><%= t(:email) %>:</span>     
+	    <%= f.text_field :email %>
+	    <br />
+	    <br />
+	  <div class="button">
+		<!--     <%= f.submit "Add User" , :class => "submit" %> -->
+		<%= f.submit %>
+	  </div>
+	 </fieldset>
+	<% end %>
+</div>

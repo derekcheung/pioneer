@@ -7,14 +7,17 @@
 		<% @news.each do |news| %>
   		<tr>
     		<td><h4><%= link_to news.title, news %></h4></td>
-    		<td><%= link_to t(:edit), edit_news_path(news) %></td>
-    		<td><%= link_to t(:destroy), news, :confirm => 'Are you sure?', :method => :delete %></td>
+    		<% if session[:user_id] %>
+	    		<td><%= link_to t(:edit), edit_news_path(news) %></td>
+	    		<td><%= link_to t(:destroy), news, :confirm => 'Are you sure?', :method => :delete %></td>
+    		<% end %>
   		</tr>
 		<% end %>
 	</table>
 	</div>
 	<br />
-
-	<%= link_to t(:add_news), new_news_path %>
+	<% if session[:user_id] %>
+		<%= link_to t(:add_news), new_news_path %>
+	<% end %>
 </div>
 </div>

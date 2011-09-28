@@ -11,15 +11,17 @@
 		  </tr>
 		  <tr>
 		    <td>
-		    	<%= link_to t(:edit), edit_about_path(about) %>
-		    	<%= link_to t(:destroy), about, :confirm => t(:destroy_confirm), :method => :delete %>
+		    	<% if session[:user_id] %>
+			    	<%= link_to t(:edit), edit_about_path(about) %>
+			    	<%= link_to t(:destroy), about, :confirm => t(:destroy_confirm), :method => :delete %>
+		    	<% end %>
 		    </td>
 		  </tr>
-		<% end %>		
+		<% end %>
 	</table>
 	</div>
 	<br/>
-<!-- 	<%= link_to t(:new), new_about_path %> -->	
+<!-- 	<%= link_to t(:new), new_about_path %> -->
 </div>
 <div class="divider1"></div>
 <div id="normalcontent">
@@ -38,8 +40,12 @@
 			<b><%= t(:style) %> </b>
 			<%= author.style %>
 		</p>
+		<% if session[:user_id] %>
+		<p>
 		    <td><%= link_to t(:edit), edit_author_path(author) %></td>
 		    <td><%= link_to t(:destroy), author, :confirm => t(:destroy_confirm), :method => :delete %></td>
+		</p>
+		<% end %>
 	  	</tr>
 	<% end %>
 	</div>

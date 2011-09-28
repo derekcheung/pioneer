@@ -15,10 +15,6 @@ cn:
       news:
         title: "标题"
         content: "正文"
-      company:
-        name: "Company Name"
-      payroll:
-        name: Name
     hints:
       author:
         name: "Enter a unique name for this reseller"
@@ -50,6 +46,7 @@ cn:
   content: "内容"
   new: "新增"
   show: "显示"
+  detail: "详细"
   edit: "编辑"
   back: "返回"
   destroy: "删除"
@@ -70,3 +67,12 @@ cn:
   about: "公司简介"
   edit_about: "编辑关于页面"
   more: "更多"
+  #user
+  list_users: "用户列表"
+  email: "E-MAIL"
+  enter_user_details: "用户详细信息"
+  confirm: "确认密码"
+  new_user: "新增用户"
+  #admin
+  login: "登录"
+  password: "密码"

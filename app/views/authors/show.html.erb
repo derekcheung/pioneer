@@ -26,8 +26,10 @@
 			<b><%= t(:resume) %></b>
 			<%= raw @author.resume %>
 			<br/>
-<%= link_to 'Edit', edit_author_path(@author) %> |
-<%= link_to 'Back', authors_path %>
+			<% if session[:user_id] %>
+				<%= link_to t(:edit), edit_author_path(@author) %> |
+				<%= link_to t(:back), authors_path %>
+			<% end %>
 </div>
 </div>
 </div>

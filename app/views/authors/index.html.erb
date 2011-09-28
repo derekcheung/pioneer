@@ -20,8 +20,10 @@
 <!-- 	    <td><%= author.resume %></td> -->
 	    <td><%= author.style %></td>
 	    <td><%= link_to t(:show), author %></td>
-	    <td><%= link_to t(:edit), edit_author_path(author) %></td>
-	    <td><%= link_to t(:destroy), author, :confirm => t(:destroy_confirm), :method => :delete %></td>
+	    <% if session[:user_id] %>
+	    	<td><%= link_to t(:edit), edit_author_path(author) %></td>
+	    	<td><%= link_to t(:destroy), author, :confirm => t(:destroy_confirm), :method => :delete %></td>
+	    <% end %>
 	  </tr>
 	<% end %>
 <!-- 	</table> -->

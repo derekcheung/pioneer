@@ -1,5 +1,13 @@
 Pointwebsite::Application.routes.draw do
   
+  get "admin/login"
+
+  get "admin/logout"
+
+  get "admin/index"
+  
+  post 'admin/login' => 'admin#login'
+
   get "index/index"
   
   # match 'index' => 'index#index'

@@ -1,6 +1,11 @@
-<h1>Editing user</h1>
+<div id="menubottom"></div>
+<div id="content">
+<div id="normalcontent">
+	<h3><strong><%= t(:edit_user) %></strong></h3>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+	<%= render 'form' %>
+	
+	<%= link_to t(:show), @user %> |
+	<%= link_to t(:back), users_path %>
+</div>
+</div>
